@@ -1,7 +1,8 @@
 # Work cards
 
-Register for this repository. Card IDs: RRC-CWC-NNN. Next free number: RRC-CWC-002.
+Register for this repository. Card IDs: RRC-CWC-NNN. Next free number: RRC-CWC-003.
 
 | ID | Task | Review owner | Agent | Status |
 |---|---|---|---|---|
-| RRC-CWC-001 | Create repository with draft CONTROL 00–06, registry and register | Claude | Civics Dashboard 01 | In review |
+| RRC-CWC-001 | Create repository with draft CONTROL 00–06, registry and register | Claude | Civics Dashboard 01 | Merged |
+| RRC-CWC-002 | Add the November 15 total system review | Claude | Civics Dashboard 01 | In review |
