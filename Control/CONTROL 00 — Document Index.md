@@ -1,7 +1,8 @@
 CONTROL 00 — Document Index
 
-Version: 0.1
-Date: 2026-11-15
+Version: 0.2
+Change: Added CONTROL 07 — Member Onboarding and open decision 5
+Date: 2026-11-17
 Status: Draft
 Project: Runtime Republic
 
@@ -30,6 +31,7 @@ CONTROL 03 — Website and Publishing
 CONTROL 04 — Office Hours
 CONTROL 05 — Qualified Organizations
 CONTROL 06 — Commercial Separation and App Developers
+CONTROL 07 — Member Onboarding
 ```
 
 ---
@@ -42,6 +44,7 @@ CONTROL 06 — Commercial Separation and App Developers
 | 2 | Office hours day and time | CONTROL 04 |
 | 3 | Florida FairTax Educational Association's AGCL fit | CONTROL 05 |
 | 4 | Lean Office Pro LLC good standing (reinstatement) | CONTROL 01 |
+| 5 | Move CONTROL 07 to Lean-Civics-Control-Documents once that repository exists | CONTROL 07 |
 
 ---
 
