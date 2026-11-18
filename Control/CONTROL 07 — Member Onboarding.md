@@ -1,9 +1,10 @@
 CONTROL 07 — Member Onboarding
 
-Version: 0.1
-Date: 2026-11-17
+Version: 0.2
+Date: 2026-11-18
 Status: Draft
 Project: Runtime Republic
+Change: v0.2 adds two AI projects per member (§3.6), the team packet (§3.7, format in `Formats/TEAM-PACKET.md`) and the `team:` status code (§3.8).
 
 ---
 
@@ -82,6 +83,46 @@ Paying is never required to be a member. Other AIs may be used if they can read 
 
 Sources: Claude GitHub integration, https://claude.com/docs/connectors/github ; Claude Code in the cloud, https://code.claude.com/docs/en/web-quickstart
 
+## 3.6 Two AI projects per member
+
+Every member keeps two separate AI projects, so the AI that can see their money never talks to the team.
+
+| | Personal Finance project | Team project |
+|---|---|---|
+| Connected repositories | The member's private `Personal-Finance` and `master-plan` | The team repository, plus the public Gov data and control repositories |
+| Can see | Pay stubs, bills, receipts, the budget | Counts, wins and team issues only |
+| Codes | `pfmlr`, `Bill:`, `Paystub:`, `Close week:`, `Status:` | `team:`, `ack:`, `@` |
+| Output seen by | The member only | The team, and the public through the dashboard |
+
+The Team project is never connected to a private finance repository.
+
+## 3.7 The team packet
+
+At Saturday close, the Personal Finance project writes a team packet in the member's private repository. It holds only: call sign, CE levels earned, impact ratings, number of governments counted, and budget order (who gets paid first). No names, accounts, employers or dollar amounts.
+
+The exact layout is in `Formats/TEAM-PACKET.md`. Flags in a packet use IDs from the shared flag log; a member whose flag is not in the log adds it there first (`RuntimeRepublic.github.io/images/flags/README.md`).
+
+The member reads the packet, then pushes it to the team repository by pull request. That pull request is the only crossing point between private and team data, and the member carries it across.
+
+## 3.8 Cheat code: `team:`
+
+In the Team project, a member types:
+
+```
+team:
+```
+
+The AI reads `Runtime-Republic-Controls/Registry/teams.csv` and the team's `data/group-counts.csv`, `MEMBERS.md` and open issues, and shows one screen:
+
+1. Team name, level and status from the registry
+2. Members, and how many closed the week
+3. CE1 to CE5: how many earned each level, and the average impact rating
+4. Family's place in the team's budget order
+5. Open `ONBOARD:` issues, and members who have not posted their `ack:` line
+6. The team's next step
+
+`team: <team name>` shows another team's public counts only (items 1 to 4).
+
 ---
 
 # 4. Edge Cases (must be tested)
@@ -93,6 +134,9 @@ Sources: Claude GitHub integration, https://claude.com/docs/connectors/github ; 
 | A member uses an AI with no GitHub access | Member reads the file on github.com and writes the line by hand; flag for a setup check |
 | A member repeatedly misses acknowledgments | Team lead checks the member's setup and asks whether the member is still active |
 | The new member has no AI account yet | Onboarding pauses at Step 3 until one is set up |
+| A member's AI plan allows only one project | The one project is the Personal Finance project; the member reads team files on github.com until a second project is available |
+| The Team project is connected to a private finance repository | Disconnect it before any team work; report to the team lead |
+| A team packet holds a name, account, employer or dollar amount | The pull request is not merged; the member fixes the packet |
 
 ---
 
