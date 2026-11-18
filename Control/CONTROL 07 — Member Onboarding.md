@@ -1,16 +1,17 @@
 CONTROL 07 — Member Onboarding
 
-Version: 0.2
+Version: 0.3
 Date: 2026-11-18
 Status: Draft
 Project: Runtime Republic
+Change: v0.3 adds the group onboarding pathway: two doors and gates G0–G5 (§3.9), and a `gate` column in the team registry (proposed).
 Change: v0.2 adds two AI projects per member (§3.6), the team packet (§3.7, format in `Formats/TEAM-PACKET.md`) and the `team:` status code (§3.8).
 
 ---
 
 # 1. Purpose
 
-Defines how a new member joins a team, and the onboarding smoke test that proves the AI → GitHub → AI loop works for every member each time someone joins.
+Defines how a new team or an existing group comes into Runtime Republic (§3.9), how a new member joins a team, and the onboarding smoke test that proves the AI → GitHub → AI loop works for every member each time someone joins.
 
 This document is temporary here. It moves to Lean-Civics/Lean-Civics-Control-Documents once that repository is available, and this copy is then retired with a pointer to the new home.
 
@@ -123,6 +124,49 @@ The AI reads `Runtime-Republic-Controls/Registry/teams.csv` and the team's `data
 
 `team: <team name>` shows another team's public counts only (items 1 to 4).
 
+## 3.9 Group onboarding pathway (proposed)
+
+Every team comes in through one of two doors and then passes the same gates, in order. A group cannot skip a gate. The registry shows the gate each team is working on now.
+
+### Two doors
+
+| Door | Who | First step |
+|---|---|---|
+| A. New team | A few people starting a team from scratch | One person opens the team request (G0) |
+| B. Existing group | A group that already exists: a Facebook group, a coalition, a club, an issue team such as FairTax | The group's contact opens the team request (G0) and names the outside group |
+
+Door B rules, so no group is captured and no group captures Runtime Republic:
+
+1. The outside group keeps its own name, platform and leaders. The Runtime Republic team is a separate team with its own public repository.
+2. Nobody joins as a bloc. Each person adopts the values and onboards as an individual (G1, G4). A group leader cannot adopt the values for the members.
+3. The outside group's chain of command does not carry over. The team's two admins are chosen at G2 from members who passed G1.
+4. Neither speaks for the other. The team speaks only for itself; the outside group speaks only for itself.
+5. Where the outside group's rules conflict with the six values or the control documents, the conflict is written into the team request and settled before G2.
+
+### The gates
+
+| Gate | Name | Passed when | Checked by |
+|---|---|---|---|
+| G0 | Request | An issue titled `TEAM REQUEST: <name>` is open in Runtime-Republic-Controls, giving the purpose, the door (A or B), the level (nation, state, county or city) and a proposed sponsor | Founder or sponsor |
+| G1 | Values | At least two founding members each have a private master plan and have signed `CONTROL-01-Values.md` (RP1–RP6), each in their own repository | Sponsor |
+| G2 | Purpose and sponsor | The purpose is checked against the control documents (NBLF/AGCL, NBBF, NBEF) and the registry shows no team already doing the same thing; the sponsor accepts; the team picks its team name; two admins are named from G1 members | Sponsor |
+| G3 | Stand up | A public team repository like Team America exists, with `MEMBERS.md`, `data/group-counts.csv` and `packets/`; both admins have access; the team is added to `Registry/teams.csv` by pull request | Founder |
+| G4 | Loop proven | Every founding member has passed the onboarding smoke test (§3.2–3.3) and set up both AI projects (§3.6) | Team lead |
+| G5 | First closed week | At least two members file team packets (§3.7) for the same week, they are merged, and the team posts its first rollup row. The team shows on the dashboard. Status changes from Forming to Active | Team lead, reported to the sponsor |
+
+### The registry `gate` column
+
+`Registry/teams.csv` carries a `gate` column: the gate the team is working on now (`G0` to `G5`), or `done` after G5. A team registered before this pathway existed keeps its registration and works through the gates it has not yet passed.
+
+### Status words
+
+| Status | Meaning |
+|---|---|
+| Forming | Working on G0 to G5 |
+| Active | Passed G5 and posts weekly counts |
+| Paused | No closed week for 8 weeks, or fewer than two admins after G5 |
+| Closed | The team ended. Its repository stays public as a record |
+
 ---
 
 # 4. Edge Cases (must be tested)
@@ -137,6 +181,11 @@ The AI reads `Runtime-Republic-Controls/Registry/teams.csv` and the team's `data
 | A member's AI plan allows only one project | The one project is the Personal Finance project; the member reads team files on github.com until a second project is available |
 | The Team project is connected to a private finance repository | Disconnect it before any team work; report to the team lead |
 | A team packet holds a name, account, employer or dollar amount | The pull request is not merged; the member fixes the packet |
+| An outside group asks to join "as a group" with one sign-up for everyone | Not allowed (§3.9, Door B rule 2). Each person adopts the values and onboards on their own |
+| An outside group's leader wants to be a team admin without passing G1 | Not allowed. Admins come from members who passed G1 |
+| A group's purpose duplicates a registered team | The group is pointed to that team first. A second team is registered only for a different level or place |
+| A team has only one founding member | It stays at G1 until a second member adopts the values |
+| A team loses an admin after G5 | It has 30 days to name a second admin, then its status becomes Paused |
 
 ---
 
@@ -150,6 +199,7 @@ Team leads run the steps. The `ONBOARD: <name>` issue is the record. A failed sm
 
 • CONTROL 01 — Organization, Ownership and Identity
 • CONTROL 05 — Qualified Organizations
+• Registry/teams.csv — the team registry, with the `gate` column (§3.9)
 • AGCL 00L — Smoke Test and Citizen Trigger (draft): smoke tests of government; this document applies the same pass/fail idea to members
 • Lean-Civics-Control-Documents: future home of this document
 
