@@ -4,7 +4,7 @@ Version: 0.2
 Date: 2026-11-18
 Status: Draft
 Project: Runtime Republic
-Change: v0.2 adds two AI projects per member (§3.6), the team packet (§3.7) and the `team:` status code (§3.8).
+Change: v0.2 adds two AI projects per member (§3.6), the team packet (§3.7, format in `Formats/TEAM-PACKET.md`) and the `team:` status code (§3.8).
 
 ---
 
@@ -99,6 +99,8 @@ The Team project is never connected to a private finance repository.
 ## 3.7 The team packet
 
 At Saturday close, the Personal Finance project writes a team packet in the member's private repository. It holds only: call sign, CE levels earned, impact ratings, number of governments counted, and budget order (who gets paid first). No names, accounts, employers or dollar amounts.
+
+The exact layout is in `Formats/TEAM-PACKET.md`. Flags in a packet use IDs from the shared flag log; a member whose flag is not in the log adds it there first (`RuntimeRepublic.github.io/images/flags/README.md`).
 
 The member reads the packet, then pushes it to the team repository by pull request. That pull request is the only crossing point between private and team data, and the member carries it across.
 
