@@ -1,9 +1,10 @@
 CONTROL 07 — Member Onboarding
 
-Version: 0.3
+Version: 0.4
 Date: 2026-11-18
 Status: Draft
 Project: Runtime Republic
+Change: v0.4 lets teams share the same objective: at G2 the registry is checked so a new team can find and coordinate with teams that have the same objective, never to block it (§3.9, §4).
 Change: v0.3 adds the group onboarding pathway: two doors and gates G0–G5 (§3.9), and a `gate` column in the team registry (proposed). Setup has no time limits (the 72-hour acknowledgment limit is removed); only status runs on the weekly close.
 Change: v0.2 adds two AI projects per member (§3.6), the team packet (§3.7, format in `Formats/TEAM-PACKET.md`) and the `team:` status code (§3.8).
 
@@ -152,7 +153,7 @@ Gates have no time limits. A group moves to the next gate when the current one i
 |---|---|---|---|
 | G0 | Request | An issue titled `TEAM REQUEST: <name>` is open in Runtime-Republic-Controls, giving the purpose, the door (A or B), the level (nation, state, county or city) and a proposed sponsor | Founder or sponsor |
 | G1 | Values | At least two founding members each have a private master plan and have signed `CONTROL-01-Values.md` (RP1–RP6), each in their own repository | Sponsor |
-| G2 | Purpose and sponsor | The purpose is checked against the control documents (NBLF/AGCL, NBBF, NBEF) and the registry shows no team already doing the same thing; the sponsor accepts; the team picks its team name; two admins are named from G1 members | Sponsor |
+| G2 | Purpose and sponsor | The purpose is checked against the control documents (NBLF/AGCL, NBBF, NBEF) and the registry is checked for teams with the same objective, so the new team can find and coordinate with them (a shared objective never blocks a team); the sponsor accepts; the team picks its team name; two admins are named from G1 members | Sponsor |
 | G3 | Stand up | A public team repository like Team America exists, with `MEMBERS.md`, `data/group-counts.csv` and `packets/`; both admins have access; the team is added to `Registry/teams.csv` by pull request | Founder |
 | G4 | Loop proven | Every founding member has passed the onboarding smoke test (§3.2–3.3) and set up both AI projects (§3.6) | Team lead |
 | G5 | First closed week | At least two members file team packets (§3.7) for the same week, they are merged, and the team posts its first rollup row. The team shows on the dashboard. Status changes from Forming to Active | Team lead, reported to the sponsor |
@@ -186,7 +187,8 @@ Gates have no time limits. A group moves to the next gate when the current one i
 | A team packet holds a name, account, employer or dollar amount | The pull request is not merged; the member fixes the packet |
 | An outside group asks to join "as a group" with one sign-up for everyone | Not allowed (§3.9, Door B rule 2). Each person adopts the values and onboards on their own |
 | An outside group's leader wants to be a team admin without passing G1 | Not allowed. Admins come from members who passed G1 |
-| A group's purpose duplicates a registered team | The group is pointed to that team first. A second team is registered only for a different level or place |
+| A group's objective matches a registered team | Allowed. Teams may share the same objective. The group is shown the matching teams so they can coordinate, and is registered as its own team |
+| Two teams in the same county have the same goals and objectives but different members | Allowed. Both register and run as separate teams, at the same level and place |
 | A team has only one founding member | It stays at G1 until a second member adopts the values |
 | A team loses an admin after G5 | Status becomes Paused at once, and returns to Active when a second admin is named and the team posts its next weekly counts |
 
