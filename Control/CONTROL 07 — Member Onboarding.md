@@ -4,7 +4,7 @@ Version: 0.3
 Date: 2026-11-18
 Status: Draft
 Project: Runtime Republic
-Change: v0.3 adds the group onboarding pathway: two doors and gates G0–G5 (§3.9), and a `gate` column in the team registry (proposed).
+Change: v0.3 adds the group onboarding pathway: two doors and gates G0–G5 (§3.9), and a `gate` column in the team registry (proposed). Setup has no time limits (the 72-hour acknowledgment limit is removed); only status runs on the weekly close.
 Change: v0.2 adds two AI projects per member (§3.6), the team packet (§3.7, format in `Formats/TEAM-PACKET.md`) and the `team:` status code (§3.8).
 
 ---
@@ -40,17 +40,17 @@ A team runs on one loop: a member's AI reads the team's GitHub repository, and t
 | 3 | New member | Has their AI read the team README, then posts `onboarded` on the issue |
 | 4 | Every current member | Types `ack: <name>` to their AI (§3.4) |
 | 5 | Every current member | Posts the acknowledgment line on the `ONBOARD: <name>` issue |
-| 6 | Team lead | Closes the issue when all members have acknowledged or the time limit ends |
+| 6 | Team lead | Closes the issue when all members have acknowledged |
 
 ## 3.3 Smoke test: pass or fail
 
 | Result | Condition | Handling |
 |---|---|---|
-| PASS | Every current member acknowledges within 72 hours | Close the issue |
-| PARTIAL | One or more members miss the 72 hours | New member is onboarded; each member who missed it gets a setup check |
+| PASS | Every current member has acknowledged | Close the issue |
+| PENDING | The new member posted `onboarded`, but one or more current members have not acknowledged yet | The new member is onboarded. The issue stays open, and `team:` lists who has not posted their line. There is no deadline |
 | FAIL | The new member cannot complete Step 3 | Fix the new member's setup before any work is assigned |
 
-A missed acknowledgment means a member's loop is broken (no AI, no GitHub, or lost access). It is a setup problem, not a discipline problem.
+A missing acknowledgment usually means a member's loop is broken (no AI, no GitHub, or lost access). It is a setup problem, not a discipline problem.
 
 ## 3.4 Cheat code: `ack:`
 
@@ -145,6 +145,9 @@ Door B rules, so no group is captured and no group captures Runtime Republic:
 
 ### The gates
 
+Gates have no time limits. A group moves to the next gate when the current one is checked, however long that takes.
+
+
 | Gate | Name | Passed when | Checked by |
 |---|---|---|---|
 | G0 | Request | An issue titled `TEAM REQUEST: <name>` is open in Runtime-Republic-Controls, giving the purpose, the door (A or B), the level (nation, state, county or city) and a proposed sponsor | Founder or sponsor |
@@ -176,7 +179,7 @@ Door B rules, so no group is captured and no group captures Runtime Republic:
 | A team has only the team lead | The team lead acknowledges; the test still runs |
 | Two members join the same week | One issue per new member; each runs on its own |
 | A member uses an AI with no GitHub access | Member reads the file on github.com and writes the line by hand; flag for a setup check |
-| A member repeatedly misses acknowledgments | Team lead checks the member's setup and asks whether the member is still active |
+| A member's acknowledgment stays missing while other members post theirs | Team lead checks the member's setup and asks whether the member is still active |
 | The new member has no AI account yet | Onboarding pauses at Step 3 until one is set up |
 | A member's AI plan allows only one project | The one project is the Personal Finance project; the member reads team files on github.com until a second project is available |
 | The Team project is connected to a private finance repository | Disconnect it before any team work; report to the team lead |
