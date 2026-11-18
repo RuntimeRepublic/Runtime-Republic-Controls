@@ -188,6 +188,7 @@ Gates have no time limits. A group moves to the next gate when the current one i
 | An outside group asks to join "as a group" with one sign-up for everyone | Not allowed (§3.9, Door B rule 2). Each person adopts the values and onboards on their own |
 | An outside group's leader wants to be a team admin without passing G1 | Not allowed. Admins come from members who passed G1 |
 | A group's objective matches a registered team | Allowed. Teams may share the same objective. The group is shown the matching teams so they can coordinate, and is registered as its own team |
+| Two teams in the same county have the same goals and objectives but different members | Allowed. Both register and run as separate teams, at the same level and place |
 | A team has only one founding member | It stays at G1 until a second member adopts the values |
 | A team loses an admin after G5 | Status becomes Paused at once, and returns to Active when a second admin is named and the team posts its next weekly counts |
 
