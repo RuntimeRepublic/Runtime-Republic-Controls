@@ -163,8 +163,8 @@ Door B rules, so no group is captured and no group captures Runtime Republic:
 | Status | Meaning |
 |---|---|
 | Forming | Working on G0 to G5 |
-| Active | Passed G5 and posts weekly counts |
-| Paused | No closed week for 8 weeks, or fewer than two admins after G5 |
+| Active | Passed G5 and posted counts at the latest weekly close |
+| Paused | Missed the latest weekly close, or has fewer than two admins. Returns to Active the next week it posts counts with two admins |
 | Closed | The team ended. Its repository stays public as a record |
 
 ---
@@ -185,7 +185,7 @@ Door B rules, so no group is captured and no group captures Runtime Republic:
 | An outside group's leader wants to be a team admin without passing G1 | Not allowed. Admins come from members who passed G1 |
 | A group's purpose duplicates a registered team | The group is pointed to that team first. A second team is registered only for a different level or place |
 | A team has only one founding member | It stays at G1 until a second member adopts the values |
-| A team loses an admin after G5 | It has 30 days to name a second admin, then its status becomes Paused |
+| A team loses an admin after G5 | Status becomes Paused at once, and returns to Active when a second admin is named and the team posts its next weekly counts |
 
 ---
 
