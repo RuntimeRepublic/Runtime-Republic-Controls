@@ -32,6 +32,7 @@ CONTROL 04 — Office Hours
 CONTROL 05 — Qualified Organizations
 CONTROL 06 — Commercial Separation and App Developers
 CONTROL 07 — Member Onboarding
+CONTROL 08 — Lean Civics Workshop (Draft)
 ```
 
 ---
@@ -45,6 +46,7 @@ CONTROL 07 — Member Onboarding
 | 3 | Florida FairTax Educational Association's AGCL fit | CONTROL 05 |
 | 4 | Lean Office Pro LLC good standing (reinstatement) | CONTROL 01 |
 | 5 | Move CONTROL 07 to Lean-Civics-Control-Documents once that repository exists | CONTROL 07 |
+| 6 | Adopt W6 (score by rules met); W8 amendment path to AGCL 00G G6; where state and local plans live | CONTROL 08 |
 
 ---
 
