@@ -1,10 +1,12 @@
 CONTROL 08 — Lean Civics Workshop
 
-Version: 0.1
-Date: 2026-11-22
+Version: 0.2
+Date: 2026-11-24
+Supersedes: 0.1 (2026-11-22)
 Status: Draft
 Project: Runtime Republic
 Change: First draft from the 2026-11-22 working session (James Hodges with Claude, Opus 5.5). Card RRC-CWC-005.
+Change (0.2): rule-by-rule rating of the federal income tax (8 of 132), G2 compliance-cost correction, H.R. 25 bill findings, Adam Smith witness, NBJF added. Card RRC-CWC-006.
 
 ---
 
@@ -98,6 +100,38 @@ Unlimited teams: one school district may have parent teams for all three framewo
 Notes: 00G is H.R. 25's best feature: the receipt is the ledger entry in every payer's hand (G2, G3, G6, G8, G9 met). Bill-specific points were not re-read from the bill text this run (UNVERIFIED). Another AI rated H.R. 25 at 70%; the difference shows why one rubric (W6) is needed. Ratings are analysis, not a verdict; James and the teams decide.
 
 Open: 00A authorization window or step interval (2 years, 4 years, other, or team decides); W6 adoption; W8 amendment path; location of state and local plans; remaining controls 00B–00L to be reviewed one at a time.
+
+
+## 4.1 Rule-by-rule ratings (W6 method, 2026-11-23)
+
+Federal income tax, rated one rule at a time with James Hodges. **8 of 132 applicable rules met (6%); 6 of 132 (5%) without the 16th Amendment.**
+
+| Control | Rules | Met | Met rules |
+|---|---|---|---|
+| 00A Authority | 17 (§IV items 1–6, A1–A11) | 1 | §IV item 6, Constitutional Basis (16th Amendment) |
+| 00B Signal | 10 (B8 not applicable) | 1 | B9, Signal Origin Protection (UNVERIFIED) |
+| 00C Property | 12 (C8 not applicable) | 1 | C10, Inheritance Guarantee |
+| 00D Exit | 12 | 0 | — |
+| 00E Debt | 12 | 0 | — |
+| 00F Uncertainty | 12 | 0 | — |
+| 00G Transparency | 11 | 1 | G6, Secrecy Boundary |
+| 00H Constitutional | 12 | 1 | H1, Constitutional Citation |
+| 00I Enforcement | 10 | 0 | — |
+| 00J Version control | 11 | 3 | J1, J2, J5 |
+| 00L Smoke test | 13 | 0 | — |
+
+**G2 correction (James, 2026-11-23):** G2 is not met for the income tax. Compliance cost (filing, records, preparers) is disclosed nowhere. Social Security and Medicare also hide the employer's half, which is paid for the worker's labor all the same; that fails G2 and B1 for both. Social Security, Medicare and H.R. 25 are to be re-scored by this method.
+
+**Proposed amendment (not yet filed):** 00G G2 to name "compliance cost to all parties: payer, collector or employer, and government administration and enforcement," through the 00J process.
+
+**Witness (Rule S5):** Adam Smith, *The Wealth of Nations* (1776), Book V, Ch. II, Part II, fourth maxim: a tax should take "as little as possible over and above what it brings into the public treasury." Already listed in AGCL_Doctrinal_Foundations_and_Economic_Lineage.txt.
+
+**H.R. 25 bill findings (119th Congress, as introduced; govinfo):** Sec. 204, sellers' administrative credit of the greater of $200 or 0.25% of tax remitted, capped at 20%; Sec. 401(d)(2), administering states keep 0.25%; Sec. 509, the tax is charged separately and shown on every receipt. Collection costs are declared and paid, consistent with Smith's maxim. Sec. 401 sunset text not yet read.
+
+**Blue team price research (witnesses, not authorities):** Jorgenson (Harvard), embedded taxes in prices (22% figure secondhand, UNVERIFIED); Bachman, Haughton, Kotlikoff, Sanchez-Penalver and Tuerck, NBER Working Paper 12732 (2006), 23% rate feasible, producer prices fall relative to consumer prices (Kotlikoff consulted for FairTax.org); Kotlikoff, Cato Policy Analysis 193 (1993); Poterba (MIT), consumer prices may not rise by the full tax under imperfect competition.
+
+## 4.2 Frameworks (James, 2026-11-24)
+NBLF (constitutional and liberty; the AGCL is the United States' NBLF), **NBJF, Node-Based Justice Framework** (new: courts, police, prosecutors, defense, clerks, the bar, court experts), NBBF (budget) and NBEF (education). Workshops under NBJF: family court and police encounters (repos pending). Standing rules for those workshops: ask the user for their fix first; the system acts as a neutral ombudsman guided by the frameworks.
 
 ---
 
