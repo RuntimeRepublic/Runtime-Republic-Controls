@@ -1,0 +1,199 @@
+{
+  "registry": "Runtime Republic Bill Registry",
+  "control": "CONTROL 09 — Bill Registry",
+  "status": "DRAFT until James Hodges accepts it",
+  "last_checked": "2026-11-24",
+  "stages": [
+    "Idea",
+    "Definition",
+    "Understanding",
+    "Spec",
+    "Draft text",
+    "Filed",
+    "Committee",
+    "Passed",
+    "Law"
+  ],
+  "bills": [
+    {
+      "id": "KS-A",
+      "title": "Bill A: Comprehensive Kansas Tax System Replacement",
+      "level": "state",
+      "jurisdiction": "Kansas",
+      "ours": true,
+      "tracked_because": "ours",
+      "stage": "Definition",
+      "source_status": "LOU-004 Draft 1.12, NOT ACCEPTED, HG-D1 not passed",
+      "source": "https://github.com/RuntimeRepublic/Constitutional-Engineering/blob/main/Engineering-Office/definition/LOU-004-Bill-A-Comprehensive-Kansas-Tax-System-Replacement.md",
+      "source_commit": "bd0cd90",
+      "summary": "Mirror H.R. 25 at the state level; property tax to zero statewide (5- or 7-year county runway); planning ceilings up to 5% state and up to 5% local; prebate an open decision.",
+      "taxes": [
+        "property tax",
+        "Kansas income tax",
+        "Kansas sales and use tax"
+      ],
+      "agcl": [
+        "Point 01",
+        "Point 02",
+        "00C Rule C8"
+      ],
+      "votes": [
+        "Kansas House",
+        "Kansas Senate",
+        "Governor"
+      ],
+      "last_checked": "2026-11-24"
+    },
+    {
+      "id": "KS-B",
+      "title": "Bill B: Five-Year Kansas Property Tax Elimination Mandate",
+      "level": "state",
+      "jurisdiction": "Kansas",
+      "ours": true,
+      "tracked_because": "ours",
+      "stage": "Spec",
+      "source_status": "SPEC-002 v1.0.0, Active, Engineering Phase (Pre-Draft); LOU-001 Draft, not accepted",
+      "source": "https://github.com/RuntimeRepublic/Legislative-Manager/tree/main/projects/PRJ-001-Kansas-Property-Tax-Elimination",
+      "source_commit": "b2ab3ed",
+      "also": "https://github.com/RuntimeRepublic/Constitutional-Engineering/blob/main/Engineering-Office/definition/LOU-001-Kansas-Two-Bill-Tax-Engineering-Project.md",
+      "summary": "Mandate ending property taxation in every Kansas county within five years.",
+      "taxes": [
+        "property tax"
+      ],
+      "agcl": [
+        "Point 02",
+        "00C Rule C8"
+      ],
+      "votes": [
+        "Kansas House",
+        "Kansas Senate",
+        "Governor"
+      ],
+      "last_checked": "2026-11-24"
+    },
+    {
+      "id": "KS-ONE-HOUR",
+      "title": "Kansas One-Hour Posting Rule (legislative text posting)",
+      "level": "state",
+      "jurisdiction": "Kansas",
+      "ours": true,
+      "tracked_because": "ours",
+      "stage": "Spec",
+      "source_status": "SPEC-003, Active, Phase 1 Pre-Draft engineering",
+      "source": "https://github.com/RuntimeRepublic/Legislative-Manager/tree/main/projects/PRJ-002-Kansas-Legislative-Text-Posting",
+      "source_commit": "b2ab3ed",
+      "summary": "One-hour posting rule for Kansas legislative text; details in SPEC-003 (pre-draft).",
+      "taxes": [],
+      "agcl": [
+        "00B Rule B2",
+        "00G",
+        "00J Rule J6"
+      ],
+      "votes": [
+        "Kansas House",
+        "Kansas Senate"
+      ],
+      "last_checked": "2026-11-24"
+    },
+    {
+      "id": "AGCL-AMD-002",
+      "title": "AGCL Point 02: household prebate and business-input rebate for state and local consumption taxes",
+      "level": "framework",
+      "jurisdiction": "AGCL Control Documents",
+      "ours": true,
+      "tracked_because": "ours",
+      "stage": "Draft text",
+      "source_status": "Proposed in pull request #7; not adopted",
+      "source": "https://github.com/RuntimeRepublic/AGCL-Control-Documents/pull/7",
+      "summary": "Allows the two H.R. 25 credits (monthly prebate by household size; refund of tax on business purchases) in state and local consumption taxes.",
+      "taxes": [
+        "state and local consumption taxes"
+      ],
+      "agcl": [
+        "Point 02",
+        "00J"
+      ],
+      "votes": [
+        "Founder"
+      ],
+      "last_checked": "2026-11-24"
+    },
+    {
+      "id": "US-HR25",
+      "title": "H.R. 25, FairTax Act of 2025",
+      "level": "federal",
+      "jurisdiction": "United States, 119th Congress",
+      "ours": false,
+      "tracked_because": "agcl-point",
+      "stage": "Committee",
+      "source_status": "Introduced; verify current status on congress.gov",
+      "source": "https://www.govinfo.gov/app/details/BILLS-119hr25ih",
+      "summary": "Replaces federal income, payroll, estate and gift taxes with a 23% tax-inclusive national sales tax and a monthly prebate.",
+      "taxes": [
+        "federal income tax",
+        "Social Security tax",
+        "Medicare tax",
+        "estate and gift tax"
+      ],
+      "agcl": [
+        "Point 01"
+      ],
+      "votes": [
+        "U.S. House",
+        "U.S. Senate",
+        "President"
+      ],
+      "last_checked": "2026-11-24"
+    },
+    {
+      "id": "US-HR4324",
+      "title": "H.R. 4324, One Subject at a Time Act",
+      "level": "federal",
+      "jurisdiction": "United States, 119th Congress",
+      "ours": false,
+      "tracked_because": "agcl-point",
+      "stage": "Committee",
+      "source_status": "Introduced July 10, 2025; referred to House Judiciary",
+      "source": "https://www.govinfo.gov/app/details/BILLS-119hr4324ih",
+      "companion": "US-S59",
+      "summary": "Each bill or joint resolution limited to one subject, stated in its title.",
+      "taxes": [],
+      "agcl": [
+        "00B",
+        "00J Rule J4",
+        "00G"
+      ],
+      "votes": [
+        "U.S. House",
+        "U.S. Senate",
+        "President"
+      ],
+      "last_checked": "2026-11-24"
+    },
+    {
+      "id": "US-S59",
+      "title": "S. 59, One Subject at a Time Act",
+      "level": "federal",
+      "jurisdiction": "United States, 119th Congress",
+      "ours": false,
+      "tracked_because": "agcl-point",
+      "stage": "Committee",
+      "source_status": "Introduced Jan 9, 2025; referred to Senate Rules and Administration",
+      "source": "https://www.congress.gov/bill/119th-congress/senate-bill/59",
+      "companion": "US-HR4324",
+      "summary": "Senate companion to H.R. 4324.",
+      "taxes": [],
+      "agcl": [
+        "00B",
+        "00J Rule J4",
+        "00G"
+      ],
+      "votes": [
+        "U.S. House",
+        "U.S. Senate",
+        "President"
+      ],
+      "last_checked": "2026-11-24"
+    }
+  ]
+}
