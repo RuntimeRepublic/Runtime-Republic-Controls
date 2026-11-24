@@ -33,6 +33,7 @@ CONTROL 05 — Qualified Organizations
 CONTROL 06 — Commercial Separation and App Developers
 CONTROL 07 — Member Onboarding
 CONTROL 08 — Lean Civics Workshop (Draft)
+CONTROL 09 — Bill Registry (Draft)
 ```
 
 ---
